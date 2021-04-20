@@ -2,7 +2,6 @@ locals {
   config_json = jsondecode(file("./config.json"))
   server_ip_address = local.config_json.server_ip_address
   server_name = local.config_json.server_name
-  server_zone = local.config_json.server_zone
   domain = local.config_json.domain
   email = local.config_json.email
 }
