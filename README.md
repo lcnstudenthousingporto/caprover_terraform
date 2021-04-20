@@ -20,8 +20,8 @@ Before running the project you must add define some variables in **config.json**
 
 ```json
 {
-    "server_name":"[YOUR_LIGHTSAIL_SERVER_NAME]",
-    "server_ip_address":"[YOUR_LIGHTSAIL_SERVER_IP]",
+    "server_name":"[SERVER_NAME]",
+    "server_ip_address":"[SERVER_IP_ADDRESS]",
     "domain":"[YOUR_DOMAIN]",
     "email":"[YOUR_CAPROVER_CONTACT_EMAIL]"
 }
