@@ -27,7 +27,7 @@ Before running the project you must add define some variables in **config.json**
 }
 ```
 
-Visit your AWS Lightsail dashboard and get the required Server details.
+Visit your AWS Lightsail dashboard and get the required Server details. For the domain, use same the same that is pointing to your Server and for the email just use the one you prefer.
 
 ![Users panel](Images/LighstailServer.jpg)
 
