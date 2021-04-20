@@ -1,6 +1,7 @@
 {
-    "server_name":"[YOUR_LIGHTSAIL_SERVER_NAME]",
-    "server_ip_address":"[YOUR_LIGHTSAIL_SERVER_IP]",
-    "domain":"[YOUR_DOMAIN]",
-    "email":"[YOUR_CAPROVER_CONTACT_EMAIL]"
+    "server_name":"LCN_server",
+    "server_ip_address":"52.57.100.136",
+    "server_zone":"eu-central-1",
+    "domain":"blueresidence.pt",
+    "email":"lcnstudenthousingporto@gmail.com"
 }

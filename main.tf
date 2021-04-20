@@ -1,13 +1,17 @@
-terraform {
-  required_providers {}
-}
-
 locals {
   config_json = jsondecode(file("./config.json"))
   server_ip_address = local.config_json.server_ip_address
   server_name = local.config_json.server_name
+  server_zone = local.config_json.server_zone
   domain = local.config_json.domain
   email = local.config_json.email
+}
+
+// configure default provider
+// for all resources with preffix "aws_"
+provider "aws" {
+  profile = "default"
+  region  = local.server_zone
 }
 
 // Firewall - Open ports for SSH, CapRover, etc 
@@ -53,7 +57,7 @@ resource "null_resource" "download_ssh_key" {
 resource "null_resource" "install_caprover" {
   connection {
     type  = "ssh"
-    host  = local.host_ip_addr
+    host  = local.server_ip_address
     user  = "ubuntu"
     port  = 22
     agent = true
@@ -100,8 +104,6 @@ resource "local_file" "caprover_create_json" {
       "caproverName": "lcn_caprover",
     })
     filename = "caprover.json"
-
-    depends_on = [aws_lightsail_static_ip_attachment.static_ip_attach]
 }
 
 resource "null_resource" "caprover_configure" {

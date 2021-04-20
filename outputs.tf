@@ -1,5 +1,5 @@
 output "captain_rover_url" {
-  value       = "https://captain.${local.domain_dns_zone}"
+  value       = "https://captain.${local.domain}"
   description = "Access this url to start adding your Apps"
 }
 
