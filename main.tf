@@ -7,13 +7,6 @@ locals {
   email = local.config_json.email
 }
 
-// configure default provider
-// for all resources with preffix "aws_"
-provider "aws" {
-  profile = "default"
-  region  = local.server_zone
-}
-
 // Firewall - Open ports for SSH, CapRover, etc 
 // here required ports for CapRover: https://caprover.com/docs/get-started.html
 locals {
