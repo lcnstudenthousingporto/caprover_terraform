@@ -2,7 +2,7 @@
 
 [CaptainRover](https://caprover.com/) is an extremely easy to use app/database deployment & web server manager for your NodeJS, Python, PHP, ASP.NET, Ruby, MySQL, MongoDB, Postgres, WordPress (and etc...) applications, and it's free!
 
-This is a [Terraform](https://registry.terraform.io) project to automatically install and configure CaptainRover in an [AWS Lightsail server instance](https://aws.amazon.com/lightsail/). If you want to learn how to use Terraform to configure your AWS Lightsail server check this [GitHub Repo](https://github.com/lcnstudenthousingporto/infrastructure_terraform).
+This is a [Terraform](https://registry.terraform.io) project to automatically install and configure CaptainRover in an [AWS Lightsail](https://aws.amazon.com/lightsail/) server instance. If you want to learn how to use Terraform to configure your AWS Lightsail server check this [GitHub Repo](https://github.com/lcnstudenthousingporto/infrastructure_terraform).
 
 ## Setup
 
