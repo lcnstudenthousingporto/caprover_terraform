@@ -16,7 +16,7 @@ npm install -g caprover
 
 Now, let's make things work!
 
-Before running the project you must add define some variables in **config.json** file. Below is our default content, the only value that you're required to define is your domain.
+Before running the project you must add define some variables in [**config.json**](config.json) file. Below is our default content, the only value that you're required to define is your domain.
 
 ```json
 {
