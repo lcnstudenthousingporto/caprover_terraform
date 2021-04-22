@@ -39,3 +39,31 @@ terraform apply
 ```
 
 First command initializes the project and downloads all provider dependencies, the second adds the specified resources.
+
+## Small fix - *the 'www.' problem*
+
+CapRover uses a [nginx](https://www.nginx.com/) server as gateway and, consequently, as a router, where each app **app_abc** is called via a url with the following format **[app_abc]**.*[your_cool_domain.com]*.
+
+A problem arises when you use *www.* in your url, because *www.* is treated as part of your *app name*. To deal with this issue, CapRover allows us to add a custom rewrite rule to nginx. A rule to remove the *www.* part of the url before routing to the our app. To do so, click the 'Edit Default Nginx Configuration' button in the HTTP Settings of your App (see next image), and paste the rule presented below.
+
+![Users panel](Images/EditNginx.jpg)
+
+```javascript
+
+server {
+    listen 80;
+    listen [::]:80;
+    <%
+    if (s.hasSsl) {
+    %>
+        listen              443 ssl http2;
+        ssl_certificate     <%-s.crtPath%>;
+        ssl_certificate_key <%-s.keyPath%>;
+    <%
+    }
+    %>
+    server_name www.blueresidence.pt;
+    return 301 $scheme://blueresidence.pt;
+}
+
+```
