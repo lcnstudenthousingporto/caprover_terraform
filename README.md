@@ -1,4 +1,4 @@
-# Installing and configuring Caprover with Terraform
+# Install Caprover using Terraform
 
 [CaptainRover](https://caprover.com/) is an extremely easy to use app/database deployment & web server manager for your NodeJS, Python, PHP, ASP.NET, Ruby, MySQL, MongoDB, Postgres, WordPress (and etc...) applications, and it's free!
 
