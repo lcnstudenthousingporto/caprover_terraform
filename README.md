@@ -44,7 +44,7 @@ First command initializes the project and downloads all provider dependencies, t
 
 CapRover uses a [nginx](https://www.nginx.com/) server as gateway and, consequently, as a router, where each app **app_abc** is called via a url with the following format **[app_abc]**.*[your_cool_domain.com]*.
 
-A problem arises when you use *www.* in your url, because *www.* is treated as part of your *app name*. To deal with this issue, CapRover allows us to add a custom rewrite rule to nginx. A rule to remove the *www.* part of the url before routing to the our app. To do so, click the 'Edit Default Nginx Configuration' button in the HTTP Settings of your App (see next image), and add the rule presented below to the beginning of the configuration.
+A problem arises when you use *www.* in your url, because *www.* is treated as part of your *app name*. To deal with this issue, CapRover allows us to add a custom rewrite rule to nginx. A rule to remove the *www.* part from the url before parsing and routing to your app. To do so, click the 'Edit Default Nginx Configuration' button in the HTTP Settings of your App (see next image), and add the rule presented below to the beginning of the configuration.
 
 ![Users panel](Images/EditNginx.jpg)
 
