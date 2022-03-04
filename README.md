@@ -62,7 +62,7 @@ server {
     <%
     }
     %>
-    server_name www.blueresidence.pt;
+    server_name $scheme://www.blueresidence.pt;
     return 301 $scheme://blueresidence.pt;
 }
 
