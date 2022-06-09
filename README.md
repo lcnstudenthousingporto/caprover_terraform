@@ -1,4 +1,4 @@
-# Install Caprover using Terraform
+# Install Caprover in AWS Lightsail using Terraform
 
 [CaptainRover](https://caprover.com/) is an extremely easy to use app/database deployment & web server manager for your NodeJS, Python, PHP, ASP.NET, Ruby, MySQL, MongoDB, Postgres, WordPress (and etc...) applications, and it's free!
 
@@ -16,7 +16,7 @@ npm install -g caprover
 
 Now, let's make things work!
 
-Before running the project you must add define some variables in [**config.json**](config.json) file. Below is our default content, the only value that you're required to define is your domain.
+Before running the project you must add define some variables in [**config.json**](config.json) file. Below are the variables you must include and define:
 
 ```json
 {
